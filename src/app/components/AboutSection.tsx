@@ -73,10 +73,11 @@ export default function AboutSection() {
             <div className="relative mb-8">
               {/* Main image placeholder */}
               <div className="bg-gradient-to-br from-gray-400 to-gray-500 rounded-lg h-80 flex items-center justify-center mb-6">
-                <div className="text-center text-white">
-                  <div className="text-6xl mb-4">🏗️</div>
-                  <p className="text-lg">Construction Site</p>
-                </div>
+                <img 
+                  src="/excavator.png" 
+                  alt="Construction Site" 
+                  className="w-full object-cover rounded-lg"
+                />
               </div>
             </div>
 
