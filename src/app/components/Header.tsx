@@ -7,10 +7,15 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px- sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
+            <img
+              src="/logo.png"
+              alt="M & M Excavation Logo"
+              className="h-30 w-20 mr-3 object-contain"
+            />
             <div className="text-2xl font-bold text-[#e67e22]">
               M & M Excavation
             </div>
@@ -54,7 +59,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="text-sm text-gray-600">
               <div className="font-semibold">Call Now</div>
-              <div className="text-[#e67e22]">(555) 123-4567</div>
+              <div className="text-[#e67e22]">(636) 584-9335</div>
             </div>
             <a
               href="#contact"
@@ -124,7 +129,7 @@ export default function Header() {
               <div className="px-3 py-2">
                 <div className="text-sm text-gray-600 mb-2">
                   <div className="font-semibold">Call Now</div>
-                  <div className="text-[#e67e22]">(555) 123-4567</div>
+                  <div className="text-[#e67e22]">(636) 584-9335</div>
                 </div>
                 <a
                   href="#contact"

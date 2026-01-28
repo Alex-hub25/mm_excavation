@@ -90,7 +90,7 @@ export default function ContactSection() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-[#e67e22]"
-                    placeholder="(555) 123-4567"
+                    placeholder="(636) 123-4567"
                     suppressHydrationWarning
                   />
                 </div>
@@ -111,7 +111,6 @@ export default function ContactSection() {
                     <option value="site-development">Site Development</option>
                     <option value="grading">Grading & Leveling</option>
                     <option value="site-clearing">Site Clearing</option>
-                    <option value="utility-installation">Utility Installation</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
@@ -146,29 +145,20 @@ export default function ContactSection() {
           {/* Contact information */}
           <div>
             {/* Equipment placeholder image */}
-            <div className="bg-gradient-to-br from-[#e67e22] to-[#d35400] rounded-lg p-8 h-64 flex items-center justify-center mb-8">
-              <div className="text-center text-white">
-                <div className="text-6xl mb-4">🚜</div>
+            <div className="relative rounded-lg p-8 h-64 flex flex-col items-center justify-center mb-8 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#e67e22]/60 to-[#d35400]/60 pointer-events-none" style={{ zIndex: 0 }} />
+              <div className="flex items-center justify-center gap-8 mb-4 z-10 relative">
+                <img src="/kubota_logo.png" alt="Kubota Logo" className="h-24 w-auto object-contain drop-shadow-lg" />
+                <img src="/cummins_logo.png" alt="Cummins Logo" className="h-24 w-auto object-contain drop-shadow-lg" />
+              </div>
+              <div className="text-center text-white z-10 relative">
                 <h3 className="text-2xl font-bold mb-2">Professional Equipment</h3>
                 <p className="text-lg opacity-90">Ready for Your Next Project</p>
               </div>
             </div>
 
             {/* Contact details */}
-            <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-[#e67e22] rounded-lg flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="font-semibold text-lg">Visit Our Office</div>
-                  <div className="text-gray-300">1234 Construction Way<br />Yourtown, ST 12345</div>
-                </div>
-              </div>
-
+            <div>
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-[#e67e22] rounded-lg flex items-center justify-center">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -177,7 +167,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <div className="font-semibold text-lg">Call Us</div>
-                  <div className="text-[#e67e22] text-xl font-bold">(555) 123-4567</div>
+                  <div className="text-[#e67e22] text-xl font-bold">(636) 584-9335</div>
                 </div>
               </div>
 
@@ -189,7 +179,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <div className="font-semibold text-lg">Email Us</div>
-                  <div className="text-gray-300">info@mmexcavation.com</div>
+                  <div className="text-gray-300">lucasclavenna5@gmail.com</div>
                 </div>
               </div>
 

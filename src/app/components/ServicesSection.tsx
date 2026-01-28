@@ -35,16 +35,6 @@ export default function ServicesSection() {
       title: "Site Demolition",
       description: "With skilled operators and specialized equipment, we ensure a controlled demolition process that meets safety standards and project timelines."
     },
-    {
-      icon: "⚡",
-      title: "Utility Installation",
-      description: "With a focus on safety, efficiency, and minimal disruption, we prepare your site for reliable utility access from the ground up."
-    },
-    {
-      icon: "🔍",
-      title: "Ground Analysis",
-      description: "Using advanced testing and inspection methods, we identify risks such as soil compaction, contamination, or weak spots ensuring a safe foundation."
-    }
   ];
 
   return (
@@ -110,7 +100,7 @@ export default function ServicesSection() {
                 href="tel:+15551234567"
                 className="bg-white text-[#e67e22] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
               >
-                Call (555) 123-4567
+                Call (636) 584-9335
               </a>
               <a
                 href="#contact"
