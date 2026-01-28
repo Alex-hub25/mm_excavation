@@ -87,7 +87,7 @@ export default function Footer() {
                 </svg>
               </div>
               <div>
-                <div className="font-medium">lucasclavenna5@.com</div>
+                <a href="mailto:lucasclavenna5@gmail.com" className="font-medium hover:underline">lucasclavenna5@gmail.com</a>
                 <div className="text-gray-400 text-sm">Get a Free Quote</div>
               </div>
             </div>
