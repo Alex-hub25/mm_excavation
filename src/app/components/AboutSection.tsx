@@ -82,22 +82,6 @@ export default function AboutSection() {
                 />
               </div>
             </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-[#e67e22] mb-2">15+</div>
-                <div className="text-sm text-gray-600 font-medium">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-[#e67e22] mb-2">500+</div>
-                <div className="text-sm text-gray-600 font-medium">Projects Done</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-[#e67e22] mb-2">100%</div>
-                <div className="text-sm text-gray-600 font-medium">Satisfaction</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
