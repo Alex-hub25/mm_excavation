@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -11,6 +12,11 @@ export default function ContactSection() {
     message: ''
   });
 
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -18,12 +24,66 @@ export default function ContactSection() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const onRecaptchaChange = (token: string | null) => {
+    setRecaptchaToken(token);
+    setSubmitError(null);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // You can add actual form submission logic here
-    alert('Thank you for your message! We will contact you soon.');
+    setSubmitError(null);
+
+    // Check if reCAPTCHA is completed
+    if (!recaptchaToken) {
+      setSubmitError('Please complete the reCAPTCHA verification');
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Submit form with reCAPTCHA token
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!data.success) {
+        setSubmitError(data.message || 'Failed to send message. Please try again.');
+        recaptchaRef.current?.reset();
+        setRecaptchaToken(null);
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Reset form on success
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        project: '',
+        message: ''
+      });
+      recaptchaRef.current?.reset();
+      setRecaptchaToken(null);
+      
+      alert('Thank you for your message! We will contact you soon.');
+    } catch (error) {
+      console.error('Submission error:', error);
+      setSubmitError('An error occurred. Please try again later.');
+      recaptchaRef.current?.reset();
+      setRecaptchaToken(null);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -132,12 +192,30 @@ export default function ContactSection() {
                 ></textarea>
               </div>
 
+              {/* reCAPTCHA */}
+              <div className="flex justify-center">
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+                  onChange={onRecaptchaChange}
+                  theme="dark"
+                />
+              </div>
+
+              {/* Error message */}
+              {submitError && (
+                <div className="bg-red-500/10 border border-red-500 text-red-500 px-4 py-3 rounded-lg text-sm">
+                  {submitError}
+                </div>
+              )}
+
               <button
                 type="submit"
-                className="w-full bg-[#e67e22] text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-[#d35400] transition-colors duration-200"
+                disabled={isSubmitting || !recaptchaToken}
+                className="w-full bg-[#e67e22] text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-[#d35400] transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 suppressHydrationWarning
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>

@@ -11,13 +11,13 @@ export default function AboutSection() {
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               M & M Excavation and Dirtwork began as a dream to provide exceptional earthmoving 
               services to our community. With years of hands-on experience in the construction 
-              and excavation industry, we've grown from a small local operation to a trusted 
+              and excavation industry, we&apos;ve grown from a small local operation to a trusted 
               partner for both commercial and residential projects.
             </p>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               Our dedicated team works side by side with you and your contractors, utilizing 
               state-of-the-art equipment and advanced techniques to deliver seamless excavation 
-              and grading solutions. We understand that every project is unique, and we're 
+              and grading solutions. We understand that every project is unique, and we&apos;re 
               committed to turning your vision into reality.
             </p>
             

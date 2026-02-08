@@ -21,7 +21,7 @@ export default function TestimonialsSection() {
             What Our Clients Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our valued clients have to say about 
+            Don&apos;t just take our word for it. Here&apos;s what our valued clients have to say about 
             working with M & M Excavation and Dirtwork.
           </p>
         </div>
@@ -34,7 +34,7 @@ export default function TestimonialsSection() {
               className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-200"
             >
               {/* Quote icon */}
-              <div className="text-[#e67e22] text-4xl mb-4">"</div>
+              <div className="text-[#e67e22] text-4xl mb-4">&quot;</div>
               
               {/* Testimonial content */}
               <p className="text-gray-700 leading-relaxed mb-6 italic">

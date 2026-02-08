@@ -34,7 +34,7 @@ export default function ProjectsSection() {
                 Have a Project in Mind?
               </h3>
               <p className="text-xl text-black mb-6 max-w-2xl mx-auto">
-                Whether it's a small residential project or a large commercial development, 
+                Whether it&apos;s a small residential project or a large commercial development, 
                 we have the expertise and equipment to handle projects of any size.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
