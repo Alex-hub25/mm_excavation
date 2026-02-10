@@ -103,14 +103,11 @@ export default function Footer() {
               © 2026 M & M Excavation and Dirtwork. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-[#e67e22] transition-colors duration-200">
+              <a href="/privacy-policy" className="text-gray-400 hover:text-[#e67e22] transition-colors duration-200">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-[#e67e22] transition-colors duration-200">
+              <a href="/terms-of-service" className="text-gray-400 hover:text-[#e67e22] transition-colors duration-200">
                 Terms of Service
-              </a>
-              <a href="#" className="text-gray-400 hover:text-[#e67e22] transition-colors duration-200">
-                Safety Guidelines
               </a>
             </div>
           </div>

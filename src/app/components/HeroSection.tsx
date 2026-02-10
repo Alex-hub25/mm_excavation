@@ -12,11 +12,8 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className="text-center lg:text-left">
-            <h4 className="text-[#f39c12] text-xl md:text-2xl font-semibold mb-4 tracking-wide">
-              TRANSFORMING LANDSCAPES, BUILDING FUTURES
-            </h4>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Welcome to
+            HONEST, FAST, & DEPENDABLE
               <br></br>
               <span className="text-[#e67e22]">M & M Excavation</span>{' '}
             </h1>

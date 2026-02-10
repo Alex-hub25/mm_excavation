@@ -165,7 +165,7 @@ export default function ContactSection() {
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-[#e67e22]"
                     suppressHydrationWarning
-                  >
+                  > {/*Review with Luke */}
                     <option value="">Select Project Type</option>
                     <option value="excavation">Excavation</option>
                     <option value="site-development">Site Development</option>

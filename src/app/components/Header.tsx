@@ -73,6 +73,7 @@ export default function Header() {
           <button
             className="md:hidden flex items-center px-3 py-2 border rounded text-gray-600 border-gray-300 hover:text-[#e67e22] hover:border-[#e67e22]"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            suppressHydrationWarning
           >
             <svg className="fill-current h-3 w-3" viewBox="0 0 20 20">
               <title>Menu</title>
