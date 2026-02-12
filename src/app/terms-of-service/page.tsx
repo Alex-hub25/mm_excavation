@@ -18,7 +18,7 @@ export default function TermsOfService() {
             <p className="text-gray-700 leading-relaxed">
               By accessing our website or engaging M & M Excavation and Dirtwork for excavation and earthwork 
               services, you agree to be bound by these Terms of Service and all applicable laws and regulations 
-              in the State of Missouri. If you do not agree with any of these terms, you are prohibited from 
+              in the State of Missouri. If you do not agree with the terms listed below, you are prohibited from 
               using or accessing our services.
             </p>
           </section>
@@ -74,9 +74,9 @@ export default function TermsOfService() {
             <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
               <li><strong>Deposit:</strong> A deposit may be required before work begins, typically 25-50% of the estimated project cost</li>
               <li><strong>Progress Payments:</strong> For larger projects, progress payments may be scheduled at specific project milestones</li>
-              <li><strong>Final Payment:</strong> Final payment is due upon project completion and client acceptance</li>
+              <li><strong>Final Payment:</strong> Final payment is due upon project completion</li>
               <li><strong>Late Payments:</strong> Payments not received within 30 days may be subject to a 1.5% monthly interest charge</li>
-              <li><strong>Accepted Methods:</strong> We accept cash, checks, and major credit cards</li>
+              <li><strong>Accepted Methods:</strong> We accept cash, checks, and venmo</li>
             </ul>
           </section>
 
@@ -86,8 +86,7 @@ export default function TermsOfService() {
               The client agrees to:
             </p>
             <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
-              <li>Ensure all necessary permits are obtained before work begins (unless otherwise specified in contract)</li>
-              <li>Mark or identify all underground utilities through Missouri 811 before excavation</li>
+              <li>Ensure all necessary permits are obtained before work begins</li>
               <li>Provide clear access to the work site for our equipment</li>
               <li>Remove any personal property or valuables from the work area</li>
               <li>Ensure pets and children remain at a safe distance during operations</li>
@@ -102,8 +101,6 @@ export default function TermsOfService() {
               M & M Excavation and Dirtwork agrees to:
             </p>
             <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
-              <li>Perform work in a professional and workmanlike manner</li>
-              <li>Maintain proper licensing and insurance as required by Missouri law</li>
               <li>Comply with all applicable safety regulations and OSHA standards</li>
               <li>Minimize disruption to the property and surrounding areas</li>
               <li>Clean up the work site upon project completion</li>
@@ -128,26 +125,7 @@ export default function TermsOfService() {
             <h3 className="text-xl font-semibold text-gray-800 mb-3">Our Cancellation</h3>
             <p className="text-gray-700 leading-relaxed">
               We reserve the right to cancel or suspend work if site conditions are unsafe, payment is not 
-              received as agreed, or the client fails to meet their responsibilities under the contract.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Warranties and Disclaimers</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              We warranty our workmanship for a period of one year from project completion. This warranty 
-              does not cover:
-            </p>
-            <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
-              <li>Damage caused by natural settling or acts of nature</li>
-              <li>Damage from subsequent work by others</li>
-              <li>Issues resulting from inaccurate site information provided by client</li>
-              <li>Normal wear and tear</li>
-              <li>Buried utilities or structures not marked or disclosed</li>
-            </ul>
-            <p className="text-gray-700 leading-relaxed mt-4">
-              Services are provided "as is" beyond the warranty period. We make no other warranties, 
-              express or implied, including warranties of merchantability or fitness for a particular purpose.
+              received as agreed, or the client fails to meet their responsibilities stated in the contract.
             </p>
           </section>
 
@@ -164,10 +142,11 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">11. Underground Utilities</h2>
             <p className="text-gray-700 leading-relaxed">
-              The client is responsible for contacting Missouri 811 (Call Before You Dig) at least 
-              2 business days before excavation to mark underground utilities. We are not responsible 
-              for damage to unmarked utilities or utilities not accurately marked by the utility 
-              companies. Any delays caused by utility location issues are not our responsibility.
+              M&M Excavation and Dirtwork, holds responsibility for contacting Missiouri 811 
+              (Call Before You Dig) at least two days prior to digging. The client also may share 
+              in this resposiblity to confirm the correct proceedures have been made in a effort to 
+              mark underground utilities. Any delays caused by utility location issues are not 
+              the responsibility of M&M Excavation and Dirtwork.
             </p>
           </section>
 
@@ -187,7 +166,8 @@ export default function TermsOfService() {
               Client agrees to indemnify and hold harmless M & M Excavation and Dirtwork from any claims, 
               damages, or expenses arising from: (a) client's failure to disclose site hazards or 
               underground utilities, (b) inaccurate property information provided by client, or 
-              (c) client's failure to obtain necessary permits or approvals.
+              (c) client's failure to obtain necessary permits or approvals.(d) Clients refusal to allow
+              M&M Excavation and Dirtwork call Missouri 811 (Call Before you Dig).
             </p>
           </section>
 
