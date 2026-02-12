@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,10 +12,12 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <img
+            <Image
               src="/logo.png"
               alt="M & M Excavation Logo"
               className="h-30 w-20 mr-3 object-contain"
+              width={80}
+              height={30}
             />
             <div className="text-2xl font-bold text-[#e67e22]">
               M & M Excavation

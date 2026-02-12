@@ -164,9 +164,9 @@ export default function TermsOfService() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">13. Indemnification</h2>
             <p className="text-gray-700 leading-relaxed">
               Client agrees to indemnify and hold harmless M & M Excavation and Dirtwork from any claims, 
-              damages, or expenses arising from: (a) client's failure to disclose site hazards or 
+              damages, or expenses arising from: (a) client&apos;s failure to disclose site hazards or 
               underground utilities, (b) inaccurate property information provided by client, or 
-              (c) client's failure to obtain necessary permits or approvals.(d) Clients refusal to allow
+              (c) client&apos;s failure to obtain necessary permits or approvals.(d) Clients refusal to allow
               M&M Excavation and Dirtwork call Missouri 811 (Call Before you Dig).
             </p>
           </section>

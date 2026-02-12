@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function AboutSection() {
   return (
     <section id="about" className="py-20 bg-gray-50">
@@ -73,10 +75,10 @@ export default function AboutSection() {
             <div className="relative mb-8">
               {/* Main image placeholder */}
               <div className="bg-gradient-to-br from-gray-400 to-gray-500 rounded-lg h-100 flex items-center justify-center mb-6">
-                <img 
+                <Image 
                   src="/excavator.png" 
-                  height = "700"
-                  width = "500"
+                  height={700}
+                  width={500}
                   alt="Construction Site" 
                   className="w-full object-cover rounded-lg"
                 />

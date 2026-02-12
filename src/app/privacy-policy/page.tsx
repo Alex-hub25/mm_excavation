@@ -16,7 +16,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
             <p className="text-gray-700 leading-relaxed">
-              M & M Excavation and Dirtwork ("we," "our," or "us") is committed to protecting your privacy. 
+              M & M Excavation and Dirtwork (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. 
               This Privacy Policy explains how we collect, use, disclose, and safeguard your information when 
               you visit our website or use our excavation and earthwork services in Missouri.
             </p>
@@ -122,7 +122,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Children's Privacy</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Children&apos;s Privacy</h2>
             <p className="text-gray-700 leading-relaxed">
               Our services are not directed to children under the age of 18. We do not knowingly collect 
               personal information from children under 18.
@@ -133,7 +133,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">10. Changes to This Privacy Policy</h2>
             <p className="text-gray-700 leading-relaxed">
               We may update this Privacy Policy from time to time. We will notify you of any changes by posting 
-              the new Privacy Policy on this page and updating the "Last Updated" date.
+              the new Privacy Policy on this page and updating the &quot;Last Updated&quot; date.
             </p>
           </section>
 
