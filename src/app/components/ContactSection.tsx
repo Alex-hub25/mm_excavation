@@ -228,7 +228,7 @@ export default function ContactSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#e67e22]/60 to-[#d35400]/60 pointer-events-none" style={{ zIndex: 0 }} />
               <div className="flex items-center justify-center gap-8 mb-4 z-10 relative">
                 <Image src="/kubota_logo.png" alt="Kubota Logo" className="h-24 w-auto object-contain drop-shadow-lg" width={96} height={96} />
-                <Image src="/cummins_logo.png" alt="Cummins Logo" className="h-24 w-auto object-contain drop-shadow-lg" width={96} height={96} />
+                <Image src="/Cummins_logo.png" alt="Cummins Logo" className="h-24 w-auto object-contain drop-shadow-lg" width={96} height={96} />
               </div>
               <div className="text-center text-white z-10 relative">
                 <h3 className="text-2xl font-bold mb-2">Professional Equipment</h3>

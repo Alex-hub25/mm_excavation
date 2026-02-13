@@ -76,7 +76,7 @@ export default function AboutSection() {
               {/* Main image placeholder */}
               <div className="bg-gradient-to-br from-gray-400 to-gray-500 rounded-lg h-100 flex items-center justify-center mb-6">
                 <Image 
-                  src="/excavator.png" 
+                  src="/Excavator.png" 
                   height={700}
                   width={500}
                   alt="Construction Site" 
