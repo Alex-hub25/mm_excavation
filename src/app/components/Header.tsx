@@ -133,7 +133,7 @@ export default function Header() {
               <div className="px-5 py-4">
                 <div className="text-xl text-gray-600 mb-5">
                   <div className="font-semibold">Call Now</div>
-                  <div className="text-[#e67e22]">(636) 584-9335</div>
+                  <a href="tel:+16365849335" className="text-[#e67e22] hover:underline">(636) 584-9335</a>
                 </div>
                 <a
                   href="#contact"
