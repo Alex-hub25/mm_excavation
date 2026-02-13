@@ -59,8 +59,14 @@ export async function POST(request: NextRequest) {
     const resend = new Resend(resendApiKey);
 
     // Send email using Resend
-    const emailTo = process.env.CONTACT_EMAIL_TO || 'lucasclavenna5@gmail.com';
-    const emailFrom = process.env.CONTACT_EMAIL_FROM || 'onboarding@resend.dev';
+        const emailTo = process.env.CONTACT_EMAIL_TO;
+    if (!emailTo) {
+      return NextResponse.json(
+        { success: false, message: 'Server configuration error: Contact email not set' },
+        { status: 500 }
+      );
+    }
+    const emailFrom = process.env.CONTACT_EMAIL_FROM || 'lucasclavenna5@gmail.com';
 
     const emailHtml = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
