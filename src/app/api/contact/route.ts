@@ -11,9 +11,11 @@ interface ContactFormData {
 }
 
 export async function POST(request: NextRequest) {
+  console.log('=== Contact Form API Called ===');
   try {
     const formData: ContactFormData = await request.json();
     const { name, email, phone, project, message, recaptchaToken } = formData;
+    console.log('Form data received:', { name, email, phone, project, hasMessage: !!message, hasToken: !!recaptchaToken });
 
     // Validate required fields
     if (!name || !email || !message || !recaptchaToken) {
@@ -24,6 +26,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Verify reCAPTCHA token
+    console.log('Checking reCAPTCHA configuration...');
     const secretKey = process.env.RECAPTCHA_SECRET_KEY;
     if (!secretKey) {
       console.error('RECAPTCHA_SECRET_KEY is not configured');
@@ -32,6 +35,7 @@ export async function POST(request: NextRequest) {
         { status: 500 }
       );
     }
+    console.log('reCAPTCHA key found, verifying token...');
 
     const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaToken}`;
     const verifyResponse = await fetch(verifyUrl, { method: 'POST' });
@@ -44,8 +48,10 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
+    console.log('reCAPTCHA verified successfully');
 
     // Check if Resend API key is configured
+    console.log('Checking Resend API configuration...');
     const resendApiKey = process.env.RESEND_API_KEY;
     if (!resendApiKey || resendApiKey === 'your_resend_api_key_here') {
       console.error('RESEND_API_KEY is not configured properly');
@@ -54,19 +60,31 @@ export async function POST(request: NextRequest) {
         { status: 500 }
       );
     }
+    console.log('Resend API key found, initializing...');
 
     // Initialize Resend with the API key
     const resend = new Resend(resendApiKey);
 
     // Send email using Resend
-        const emailTo = process.env.CONTACT_EMAIL_TO;
+    console.log('Checking email configuration...');
+    const emailTo = process.env.CONTACT_EMAIL_TO;
     if (!emailTo) {
+      console.error('CONTACT_EMAIL_TO is not configured');
       return NextResponse.json(
         { success: false, message: 'Server configuration error: Contact email not set' },
         { status: 500 }
       );
     }
-    const emailFrom = process.env.CONTACT_EMAIL_FROM || 'lucasclavenna5@gmail.com';
+    
+    const emailFrom = process.env.CONTACT_EMAIL_FROM;
+    if (!emailFrom) {
+      console.error('CONTACT_EMAIL_FROM is not configured');
+      return NextResponse.json(
+        { success: false, message: 'Server configuration error: Sender email not set' },
+        { status: 500 }
+      );
+    }
+    console.log('Email config found - From:', emailFrom, 'To:', emailTo);
 
     const emailHtml = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -87,6 +105,7 @@ export async function POST(request: NextRequest) {
       </div>
     `;
 
+    console.log('Sending email via Resend...');
     const { data, error } = await resend.emails.send({
       from: emailFrom,
       to: emailTo,
@@ -96,12 +115,14 @@ export async function POST(request: NextRequest) {
     });
 
     if (error) {
-      console.error('Email sending error:', error);
+      console.error('Resend email sending error:', error);
+      console.error('Error details:', JSON.stringify(error, null, 2));
       return NextResponse.json(
-        { success: false, message: 'Failed to send email', error: error.message },
+        { success: false, message: 'Failed to send email. Please try again later.' },
         { status: 500 }
       );
     }
+    console.log('Email sent successfully. ID:', data?.id);
 
     return NextResponse.json({
       success: true,
@@ -110,6 +131,8 @@ export async function POST(request: NextRequest) {
     });
   } catch (error) {
     console.error('Contact form error:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    console.error('Error details:', errorMessage);
     return NextResponse.json(
       { success: false, message: 'An error occurred processing your request' },
       { status: 500 }
