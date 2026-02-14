@@ -12,6 +12,12 @@ interface ContactFormData {
 
 export async function POST(request: NextRequest) {
   console.log('=== Contact Form API Called ===');
+  console.log('Environment check:', {
+    hasRecaptchaSecret: !!process.env.RECAPTCHA_SECRET_KEY,
+    hasResendKey: !!process.env.RESEND_API_KEY,
+    hasEmailTo: !!process.env.CONTACT_EMAIL_TO,
+    hasEmailFrom: !!process.env.CONTACT_EMAIL_FROM
+  });
   try {
     const formData: ContactFormData = await request.json();
     const { name, email, phone, project, message, recaptchaToken } = formData;
